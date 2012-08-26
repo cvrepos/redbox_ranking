@@ -1,0 +1,14 @@
+{
+    "name": "REDBOX ranking",
+        "description": "Parses videos out of Redbox and ranks",
+        "version": "0.1",
+        "permissions": ["contextMenus", "http://127.0.0.1:8989/"],
+        "content_security_policy": "default-src 'self'",
+        "content_scripts": [
+            {
+                "matches": ["*://*.redbox.com/*"],
+                "js": ["jquery.min.js","parser.js"]
+            }
+        ]
+
+}
